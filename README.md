@@ -5,7 +5,7 @@
 Require python 3.9+
 - cd /api
 - pip3 install -r requirements.txt
--  uvicorn main:app --reload
+- uvicorn main:app --reload
 - check endpoints in http://localhost:8000/docs
 
 > Run APP
