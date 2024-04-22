@@ -10,6 +10,6 @@ Require python 3.9+
 > Run APP
 
 Require nodeJS 20+
-- cd /app
+- cd /app/beer_app
 - npm install
 - npm run dev
