@@ -1,7 +1,7 @@
 import datetime
 
-from api.order.item import ItemPayload, Item
-from api.stock.service import Stock
+from order.item import ItemPayload, Item
+from stock.service import Stock
 
 
 class OrderService:
@@ -19,7 +19,7 @@ class OrderService:
             "subtotal": 0,
             "taxes": 0,
             "discounts": 0,
-            "rounds": []
+            "round": []
         }
         self.active_orders[user_id] = order
         return self.active_orders[user_id]
@@ -30,7 +30,7 @@ class OrderService:
     def complete_round(self, user_id):
         order = self.get_order(user_id)
         if user_id in self.active_round:
-            order["rounds"].append(self.active_round[user_id])
+            order["round"].append(self.active_round[user_id])
             for item in self.active_round[user_id]["items"]:
                 order["subtotal"] += item.price * item.quantity
             order["taxes"] = order["subtotal"] * 0.19

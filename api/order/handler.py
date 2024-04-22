@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 
-from api.order.item import ItemPayload
-from api.order.service import OrderService, get_order_service
-from api.stock.service import Stock, get_stock_service
+from order.item import ItemPayload
+from order.service import OrderService, get_order_service
+from stock.service import Stock, get_stock_service
 
 store_router = APIRouter()
 

@@ -1,6 +1,6 @@
 import json
 
-from api.order.item import ItemPayload
+from order.item import ItemPayload
 
 
 class Stock:

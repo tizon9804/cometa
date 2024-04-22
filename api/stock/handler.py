@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from api.stock.service import Stock, get_stock_service
+from stock.service import Stock, get_stock_service
 
 stock_router = APIRouter()
 
